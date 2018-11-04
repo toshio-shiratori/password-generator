@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Password Generator</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+  </head>
+  <body>
+    <app>
+      <my-header></my-header>
+      <content>
+        <content-main></content-main>
+        <content-input></content-input>
+      </content>
+      <my-footer></my-footer>
+      <controller></controller>
+    </app>
+
+    <script src="js/pass-generator.js"></script>
+    <script src="tag/controller.tag" type="riot/tag"></script>
+    <script src="tag/my-header.tag" type="riot/tag"></script>
+    <script src="tag/content-main.tag" type="riot/tag"></script>
+    <script src="tag/content-input.tag" type="riot/tag"></script>
+    <script src="tag/my-footer.tag" type="riot/tag"></script>
+    <script src="https://cdn.jsdelivr.net/npm/riot@3.7/riot+compiler.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/riot-route@3.0.0/dist/route.min.js"></script>
+    <script>
+      var observer = riot.observable()
+      riot.mount('controller', {observer:observer})
+      riot.mount('my-header')
+      riot.mount('content-main', {observer:observer})
+      riot.mount('content-input', {observer:observer})
+      riot.mount('my-footer')
+      route.start(true)
+    </script>
+
+  </body>
+</html>

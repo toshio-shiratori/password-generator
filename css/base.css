@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+content {
+  padding: 5%;
+  font-size: 1em;
+}
+
+.blinking {
+  animation:blink 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes blink{
+  0% {opacity:1;}
+  50% {opacity:0;}
+  100% {opacity:1;}
+}
+
+button {
+  position: relative;
+  text-align: center;
+  margin-bottom: 10px;
+  text-decoration: none;
+  box-shadow: 1px 1px 1px black;
+  margin-top: 1em;
+}
+
+button:active {
+  top: 4px;
+  box-shadow: none;
+}
